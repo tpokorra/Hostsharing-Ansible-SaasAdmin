@@ -7,3 +7,14 @@ saasadmin:
       domain: saasadmin.example.org
       user: saasadmin
       password: testpassw0rd_changeme
+      django_secret_key: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+      INSTANCE_START: 10000
+      INSTANCE_END: 20000
+      PORT_START: 7000
+      PORT_END: 7300
+
+      SMTP_HOST: localhost
+      SMTP_PORT: 465
+      SMTP_USER: xyz00-saasadmin
+      SMTP_PWD: topsecret
+
