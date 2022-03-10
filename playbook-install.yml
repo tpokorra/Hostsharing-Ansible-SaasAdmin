@@ -75,7 +75,7 @@
     become_user: "{{pac}}-{{user}}"
     make:
       chdir: /home/pacs/{{pac}}/users/{{user}}/saasadmin
-      target: quickstart
+      target: quickstart_without_demodb
 
   - name: collect static contents
     become: yes
