@@ -100,6 +100,19 @@
       src: "/home/pacs/{{pac}}/users/{{user}}/saasadmin/static"
       dest: "/home/pacs/{{pac}}/users/{{user}}/doms/{{domain}}/htdocs-ssl/static"
       state: link
+  - name: drop subs-ssl/www/index.html
+    become: yes
+    become_user: "{{pac}}-{{user}}"
+    file:
+       path: "/home/pacs/{{pac}}/users/{{user}}/doms/{{domain}}/subs-ssl/www/index.html"
+       state: absent
+  - name: create symbolic link for www/static
+    become: yes
+    become_user: "{{pac}}-{{user}}"
+    file:
+      src: "/home/pacs/{{pac}}/users/{{user}}/saasadmin/static"
+      dest: "/home/pacs/{{pac}}/users/{{user}}/doms/{{domain}}/subs-ssl/www/static"
+      state: link
   - name: upload .htaccess file
     become: yes
     become_user: "{{pac}}-{{user}}"
