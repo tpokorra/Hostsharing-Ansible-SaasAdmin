@@ -36,13 +36,13 @@
       repo: https://github.com/solidcharity/saasadmin.git
       dest: /home/pacs/{{pac}}/users/{{user}}/saasadmin
     when: not workingtree.stat.exists
-  - name: make sure we require mysqlclient for mysql
+  - name: make sure we require psycopg2 for postgresql
     become: yes
     become_user: "{{pac}}-{{user}}"
     lineinfile:
       path: /home/pacs/{{pac}}/users/{{user}}/saasadmin/requirements.txt
-      regexp: 'mysqlclient'
-      line: mysqlclient
+      regexp: 'psycopg2'
+      line: psycopg2
 
   ##################################
   ## configuration
@@ -62,12 +62,12 @@
       dest: "/home/pacs/{{pac}}/users/{{user}}/bin/restart.sh"
       mode: '0744'
 
-  - name: upload mysql script
+  - name: upload sql script
     become: yes
     become_user: "{{pac}}-{{user}}"
     template:
-      src: "templates/mysql.sh"
-      dest: "/home/pacs/{{pac}}/users/{{user}}/bin/mysql.sh"
+      src: "templates/sql.sh"
+      dest: "/home/pacs/{{pac}}/users/{{user}}/bin/sql.sh"
       mode: '0744'
 
   - name: "Initiate virtualenv and install packages and install database with superuser"

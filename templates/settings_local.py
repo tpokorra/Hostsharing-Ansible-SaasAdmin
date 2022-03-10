@@ -8,15 +8,12 @@ ALLOWED_HOSTS = [".{{domain}}"]
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': '{{pac}}_{{user}}',
         'USER': '{{pac}}_{{user}}',
         'PASSWORD': '{{password}}',
         'HOST': 'localhost',
         'PORT': '5432',
-        'OPTIONS': {
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-        }
     }
 }
 
