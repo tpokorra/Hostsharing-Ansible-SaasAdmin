@@ -18,3 +18,6 @@ saasadmin:
       SMTP_USER: xyz00-saasadmin
       SMTP_PWD: topsecret
 
+      admin_name: John
+      admin_email: admin@example.org
+      email_prefix: SaasAdminTest
