@@ -3,6 +3,9 @@ SECRET_KEY = '{{django_secret_key}}'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
+ADMINS = [('John', 'admin@{{domain}}')]
+SERVER_EMAIL = 'no-reply@{{domain}}'
+EMAIL_SUBJECT_PREFIX = '[SaasAdmin]'
 
 ALLOWED_HOSTS = [".{{domain}}"]
 
