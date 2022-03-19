@@ -125,3 +125,15 @@
     template:
       src: "templates/passenger_wsgi.py"
       dest: "/home/pacs/{{pac}}/users/{{user}}/doms/{{domain}}/app-ssl/passenger_wsgi.py"
+
+  ####################################
+  ## install cron job
+  ####################################
+  - name: run saasadmin cronjob
+    become: yes
+    become_user: "{{pac}}-{{user}}"
+    cron:
+      name: "saasadmin"
+      minute: "5"
+      hour: "0"
+      job: "curl https://{{domain}}/cronjob"
