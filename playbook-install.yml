@@ -136,4 +136,4 @@
       name: "saasadmin"
       minute: "5"
       hour: "0"
-      job: "curl https://{{domain}}/cronjob"
+      job: "cd /home/pacs/{{pac}}/users/{{user}}/saasadmin && . .venv/bin/activate && python manage.py cronjob"
