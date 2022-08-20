@@ -5,6 +5,7 @@ SECRET_KEY = '{{django_secret_key}}'
 DEBUG = False
 ADMINS = [('{{admin_name}}', '{{admin_email}}')]
 SERVER_EMAIL = 'no-reply@{{domain}}'
+INFO_EMAIL = 'info@{{domain}}'
 EMAIL_SUBJECT_PREFIX = '[{{email_prefix}}]'
 
 ALLOWED_HOSTS = [".{{domain}}"]
