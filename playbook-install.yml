@@ -100,6 +100,13 @@
       src: "/home/pacs/{{pac}}/users/{{user}}/saasadmin/static"
       dest: "/home/pacs/{{pac}}/users/{{user}}/doms/{{domain}}/htdocs-ssl/static"
       state: link
+  - name: create symbolic link for media
+    become: yes
+    become_user: "{{pac}}-{{user}}"
+    file:
+      src: "/home/pacs/{{pac}}/users/{{user}}/saasadmin/media"
+      dest: "/home/pacs/{{pac}}/users/{{user}}/doms/{{domain}}/htdocs-ssl/media"
+      state: link
   - name: drop subs-ssl/www/index.html
     become: yes
     become_user: "{{pac}}-{{user}}"
