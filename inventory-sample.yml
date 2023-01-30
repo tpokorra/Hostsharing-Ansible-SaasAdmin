@@ -21,3 +21,7 @@ saasadmin:
       admin_name: John
       admin_email: admin@example.org
       email_prefix: SaasAdminTest
+
+      mosparo_url: "https://captcha.example.org"
+      mosparo_guid: ""
+      mosparo_publickey: ""

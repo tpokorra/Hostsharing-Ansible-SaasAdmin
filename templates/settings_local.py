@@ -39,3 +39,7 @@ PORT_START = {{PORT_START}}
 PORT_END = {{PORT_END}}
 
 SESSION_COOKIE_DOMAIN=".{{domain}}"
+
+MOSPARO_URL="{{mosparo_url}}"
+MOSPARO_GUID="{{mosparo_guid}}"
+MOSPARO_PUBLICKEY="{{mosparo_publickey}}"
